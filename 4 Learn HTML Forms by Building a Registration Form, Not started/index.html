@@ -5,30 +5,54 @@
     <title>Registration Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
     <form action="https://register-demo.freecodecamp.org" method="post">
       <fieldset required>
         <label for="first-name"
-          >Enter Your First Name: 
-          <input id="first-name" type="text" required
+          >Enter Your First Name: <input id="first-name" type="text" required
         /></label>
         <label for="last-name"
-          >Enter Your Last Name: 
-          <input id="last-name" type="text" required
+          >Enter Your Last Name: <input id="last-name" type="text" required
         /></label>
         <label for="email"
-          >Enter Your Email: 
-          <input id="email" type="email" required
+          >Enter Your Email: <input id="email" type="email" required
         /></label>
         <label for="new-password"
           >Create a New Password:
-          <input id="new-password" type="password" required minlength="8"
+          <input
+            id="new-password"
+            type="password"
+            required
+            pattern="[a-z0-5]{8,}"
         /></label>
       </fieldset>
       <fieldset></fieldset>
-      <fieldset></fieldset>
+      <label for="personal-account"
+        ><input type="radio" name="account-type" id="personal-account" />
+        Personal Account</label
+      >
+      <label for="business-account"
+        ><input type="radio" name="account-type" id="business-account" />
+        Business Account</label
+      >
+      <label for="terms-and-conditions"
+        ><input type="checkbox" required id="terms-and-conditions" /> I accept
+        the
+        <a href="https://www.freecodecamp.org/news/terms-of-service/"
+          >terms and conditions</a
+        ></label
+      >
+      <fieldset>
+        <label for=""
+          >Upload a profile picture: <input type="file" name="" id=""
+        /></label>
+        <label for=""
+          >Input your age (years): <input type="number" min="13" max="120"
+        /></label>
+      </fieldset>
       <input type="submit" value="Submit" />
     </form>
   </body>
